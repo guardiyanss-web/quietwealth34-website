@@ -75,19 +75,35 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
 
-            // Simulate form submission
+            // Submit to Formspree
             const submitBtn = this.querySelector('button[type="submit"]');
             const originalText = submitBtn.innerHTML;
             submitBtn.innerHTML = '<span>Sending...</span>';
             submitBtn.disabled = true;
 
-            // Simulate API call
-            setTimeout(() => {
-                showNotification('Your message has been sent successfully!', 'success');
-                contactForm.reset();
+            // Send to Formspree
+            fetch(this.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    showNotification('Your message has been sent successfully!', 'success');
+                    contactForm.reset();
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            })
+            .catch(error => {
+                showNotification('Something went wrong. Please try again.', 'error');
+            })
+            .finally(() => {
                 submitBtn.innerHTML = originalText;
                 submitBtn.disabled = false;
-            }, 1500);
+            });
         });
     }
 
