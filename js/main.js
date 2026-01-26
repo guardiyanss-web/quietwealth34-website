@@ -64,26 +64,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Simple validation
             if (!data.name || !data.email || !data.message) {
-                showNotification('Lütfen tüm alanları doldurun.', 'error');
+                showNotification('Please fill in all fields.', 'error');
                 return;
             }
 
             // Email validation
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(data.email)) {
-                showNotification('Lütfen geçerli bir e-posta adresi girin.', 'error');
+                showNotification('Please enter a valid email address.', 'error');
                 return;
             }
 
             // Simulate form submission
             const submitBtn = this.querySelector('button[type="submit"]');
             const originalText = submitBtn.innerHTML;
-            submitBtn.innerHTML = '<span>Gönderiliyor...</span>';
+            submitBtn.innerHTML = '<span>Sending...</span>';
             submitBtn.disabled = true;
 
             // Simulate API call
             setTimeout(() => {
-                showNotification('Mesajınız başarıyla gönderildi!', 'success');
+                showNotification('Your message has been sent successfully!', 'success');
                 contactForm.reset();
                 submitBtn.innerHTML = originalText;
                 submitBtn.disabled = false;
