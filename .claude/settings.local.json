@@ -10,7 +10,10 @@
       "Bash(git remote add:*)",
       "Bash(git push:*)",
       "Bash(ren:*)",
-      "Bash(ren \"QUIET WEALTH \\(5\\).jpg\" \"banner.jpg\")"
+      "Bash(ren \"QUIET WEALTH \\(5\\).jpg\" \"banner.jpg\")",
+      "Bash(git pull:*)",
+      "Bash(git stash:*)",
+      "Bash(curl:*)"
     ]
   }
 }
