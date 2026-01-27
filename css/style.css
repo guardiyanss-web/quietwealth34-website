@@ -1074,13 +1074,13 @@ h1, h2, h3, h4 {
 
 .analysis-cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
 }
 
 .analysis-card {
     background: var(--color-bg-card);
-    border-radius: 15px;
+    border-radius: 12px;
     border: 1px solid var(--color-border);
     overflow: hidden;
     cursor: pointer;
@@ -1088,14 +1088,13 @@ h1, h2, h3, h4 {
 }
 
 .analysis-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-3px);
     border-color: var(--color-gold);
-    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.15);
 }
 
 .analysis-card-image {
     position: relative;
-    height: 180px;
+    height: 140px;
     overflow: hidden;
 }
 
@@ -1103,60 +1102,68 @@ h1, h2, h3, h4 {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.analysis-card:hover .analysis-card-image img {
-    transform: scale(1.05);
 }
 
 .analysis-card-tag {
     position: absolute;
-    top: 12px;
-    left: 12px;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 0.75rem;
+    top: 8px;
+    left: 8px;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.65rem;
     font-weight: 600;
     color: white;
 }
 
 .tag-crypto {
-    background: linear-gradient(135deg, #f7931a, #ff6b00);
+    background: #f7931a;
 }
 
 .tag-stock {
-    background: linear-gradient(135deg, #10b981, #059669);
+    background: #10b981;
 }
 
 .tag-tech {
-    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+    background: #8b5cf6;
 }
 
 .tag-industrial {
-    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    background: #3b82f6;
 }
 
 .analysis-card-content {
-    padding: 20px;
+    padding: 12px;
 }
 
 .analysis-card-content h3 {
-    font-size: 1.1rem;
-    margin-bottom: 8px;
+    font-size: 0.9rem;
+    margin-bottom: 4px;
     color: var(--color-text-primary);
 }
 
 .analysis-card-price {
-    font-size: 1.4rem;
-    font-weight: 700;
+    font-size: 1rem;
+    font-weight: 600;
     color: var(--color-gold);
-    margin-bottom: 8px;
+    margin-bottom: 4px;
 }
 
 .analysis-card-desc {
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     color: var(--color-text-muted);
+    line-height: 1.3;
+}
+
+@media (max-width: 992px) {
+    .analysis-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .analysis-cards-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* ===== Analysis Modal ===== */
