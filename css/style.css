@@ -1546,3 +1546,19 @@ h1, h2, h3, h4 {
         gap: 10px;
     }
 }
+
+/* ===== Visitor Counter ===== */
+.visitor-counter {
+    margin-top: 15px;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.visitor-counter #visitor-count {
+    color: var(--color-gold);
+    font-weight: 600;
+}

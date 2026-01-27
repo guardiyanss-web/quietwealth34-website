@@ -284,4 +284,17 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     console.log('Quiet Wealth website loaded successfully!');
+
+    // Visitor Counter
+    const visitorCountEl = document.getElementById('visitor-count');
+    if (visitorCountEl) {
+        fetch('https://api.counterapi.dev/v1/quietwealth34/visits/up')
+            .then(res => res.json())
+            .then(data => {
+                visitorCountEl.textContent = data.count.toLocaleString();
+            })
+            .catch(() => {
+                visitorCountEl.textContent = '1,000+';
+            });
+    }
 });
