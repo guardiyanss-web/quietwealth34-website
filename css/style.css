@@ -1065,3 +1065,106 @@ h1, h2, h3, h4 {
         font-size: 1.8rem;
     }
 }
+
+/* ===== Market Analysis Section ===== */
+.market-analysis {
+    padding: 80px 0;
+    background: var(--color-bg-secondary);
+}
+
+.analysis-card {
+    background: var(--color-bg-card);
+    border-radius: 20px;
+    border: 1px solid var(--color-border);
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+}
+
+.analysis-image {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+}
+
+.analysis-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.analysis-content {
+    padding: 40px;
+}
+
+.analysis-tag {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark));
+    color: var(--color-bg-primary);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.analysis-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: var(--color-text-primary);
+}
+
+.analysis-date {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.analysis-text {
+    color: var(--color-text-secondary);
+    line-height: 1.8;
+}
+
+.analysis-text p {
+    margin-bottom: 15px;
+}
+
+.analysis-text ul {
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+.analysis-text li {
+    margin-bottom: 8px;
+    color: var(--color-text-secondary);
+}
+
+.analysis-disclaimer {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid var(--color-border);
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+@media (max-width: 992px) {
+    .analysis-card {
+        grid-template-columns: 1fr;
+    }
+
+    .analysis-image {
+        min-height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .analysis-content {
+        padding: 25px;
+    }
+
+    .analysis-content h3 {
+        font-size: 1.4rem;
+    }
+}
