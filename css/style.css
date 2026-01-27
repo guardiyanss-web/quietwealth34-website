@@ -1066,105 +1066,270 @@ h1, h2, h3, h4 {
     }
 }
 
-/* ===== Market Analysis Section ===== */
-.market-analysis {
-    padding: 80px 0;
-    background: var(--color-bg-secondary);
+/* ===== Analysis Page Styles ===== */
+.analysis-page-section {
+    padding: 60px 0;
 }
 
-.analysis-card {
+.analysis-article {
     background: var(--color-bg-card);
     border-radius: 20px;
     border: 1px solid var(--color-border);
     overflow: hidden;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0;
-}
-
-.analysis-image {
-    width: 100%;
-    height: 100%;
-    min-height: 400px;
-}
-
-.analysis-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.analysis-content {
     padding: 40px;
 }
 
-.analysis-tag {
-    display: inline-block;
-    background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark));
-    color: var(--color-bg-primary);
-    padding: 6px 16px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    margin-bottom: 15px;
-}
-
-.analysis-content h3 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-    color: var(--color-text-primary);
-}
-
-.analysis-date {
-    color: var(--color-text-muted);
-    font-size: 0.9rem;
+.analysis-article-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 20px;
 }
 
-.analysis-text {
+.analysis-tag-crypto {
+    background: linear-gradient(135deg, #f7931a, #ff6b00);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.analysis-article-date {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+}
+
+.analysis-article h2 {
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    color: var(--color-text-primary);
+}
+
+.analysis-article-image {
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    border: 1px solid var(--color-border);
+}
+
+.analysis-article-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.analysis-article-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.analysis-box {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 15px;
+    padding: 25px;
+    border-left: 4px solid var(--color-gold);
+}
+
+.analysis-box h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: var(--color-gold);
+}
+
+.analysis-box p {
     color: var(--color-text-secondary);
     line-height: 1.8;
 }
 
-.analysis-text p {
-    margin-bottom: 15px;
+.highlight-price {
+    color: #00d4aa;
+    font-weight: 600;
+    font-size: 1.1em;
 }
 
-.analysis-text ul {
-    margin: 15px 0;
-    padding-left: 20px;
+.highlight-ath {
+    color: #ff6b6b;
+    font-weight: 600;
 }
 
-.analysis-text li {
-    margin-bottom: 8px;
+.analysis-levels {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.support-box {
+    border-left-color: #00d4aa;
+}
+
+.support-box h3 {
+    color: #00d4aa;
+}
+
+.resistance-box {
+    border-left-color: #ff6b6b;
+}
+
+.resistance-box h3 {
+    color: #ff6b6b;
+}
+
+.analysis-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.analysis-box li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.analysis-box li:last-child {
+    border-bottom: none;
+}
+
+.level-price {
+    color: var(--color-text-primary);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.level-desc {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+}
+
+.scenario-box {
+    border-left-color: #a855f7;
+}
+
+.scenario-box h3 {
+    color: #a855f7;
+}
+
+.scenario-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.scenario {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.scenario.bullish {
+    background: rgba(0, 212, 170, 0.1);
+}
+
+.scenario.bearish {
+    background: rgba(255, 107, 107, 0.1);
+}
+
+.scenario-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.scenario.bullish .scenario-icon {
+    background: #00d4aa;
+    color: #0a0a0f;
+}
+
+.scenario.bearish .scenario-icon {
+    background: #ff6b6b;
+    color: #0a0a0f;
+}
+
+.scenario p {
+    margin: 0;
     color: var(--color-text-secondary);
 }
 
-.analysis-disclaimer {
-    margin-top: 25px;
-    padding-top: 20px;
-    border-top: 1px solid var(--color-border);
-    color: var(--color-text-muted);
-    font-size: 0.85rem;
-    font-style: italic;
+.text-green {
+    color: #00d4aa;
+    font-weight: 600;
 }
 
-@media (max-width: 992px) {
-    .analysis-card {
-        grid-template-columns: 1fr;
-    }
+.text-red {
+    color: #ff6b6b;
+    font-weight: 600;
+}
 
-    .analysis-image {
-        min-height: 300px;
-    }
+.news-box {
+    border-left-color: #3b82f6;
+}
+
+.news-box h3 {
+    color: #3b82f6;
+}
+
+.news-list {
+    list-style: none;
+    padding: 0;
+}
+
+.news-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 0;
+    color: var(--color-text-secondary);
+}
+
+.news-list li::before {
+    content: "•";
+    color: #3b82f6;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.analysis-disclaimer-box {
+    background: rgba(255, 193, 7, 0.1);
+    border: 1px solid rgba(255, 193, 7, 0.3);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.analysis-disclaimer-box p {
+    color: #ffc107;
+    font-style: italic;
+    margin: 0;
 }
 
 @media (max-width: 768px) {
-    .analysis-content {
-        padding: 25px;
+    .analysis-article {
+        padding: 20px;
     }
 
-    .analysis-content h3 {
-        font-size: 1.4rem;
+    .analysis-article h2 {
+        font-size: 1.6rem;
+    }
+
+    .analysis-levels {
+        grid-template-columns: 1fr;
+    }
+
+    .analysis-article-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
     }
 }
