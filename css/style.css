@@ -1095,6 +1095,37 @@ h1, h2, h3, h4 {
     font-weight: 600;
 }
 
+.analysis-tag-stock {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.analysis-tag-tech {
+    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.analysis-tag-industrial {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.analysis-article {
+    margin-bottom: 50px;
+}
+
 .analysis-article-date {
     color: var(--color-text-muted);
     font-size: 0.9rem;
@@ -1298,6 +1329,17 @@ h1, h2, h3, h4 {
     color: #3b82f6;
     font-size: 1.5rem;
     line-height: 1;
+}
+
+.news-list li a {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.news-list li a:hover {
+    color: #3b82f6;
+    text-decoration: underline;
 }
 
 .analysis-disclaimer-box {
